@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Calibri;
 }
 
 .main {
@@ -14,6 +14,13 @@
     align-items: center;
 }
 
+.titulo {
+    color: #fff;
+    margin: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
 .contenedor {
     width: 60%;
     height: 30%;
@@ -21,11 +28,11 @@
     padding: 20px;
     margin-bottom: 20px;
     resize: none;
+    font-size: 20px;
 }
 
 .contenedor:focus {
-    border: none;
-    background-color: azure;
+    outline: none;
 }
 
 .contadores {
@@ -35,10 +42,26 @@
     color: #fff;
 }
 
-.contador_letras {
-    width: 20%;
+.contador {
+    margin: 10px;
 }
 
-.contador_palabras {
-    width: 20%;
+@media (max-width:500px) {
+    .contenedor {
+        height: 50%;
+    }
+    .contadores {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 20px;
+    }
+    .contador_letras {
+        width: 100%;
+    }
+    .contador_palabras {
+        width: 100%;
+    }
 }
